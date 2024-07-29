@@ -1,0 +1,87 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: wheat;
+}
+
+section{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin-left: 70px;
+    margin-top: 150px;
+}
+
+#tela{
+    width: 60%;
+    height: 600px;
+    background-color: black;
+    
+}
+
+#teclado{
+    width: 35%;
+    height: 650px;
+    
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#justica{
+    background-color: rgb(247, 230, 198);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+    border: solid 1px rgb(243, 238, 228);
+}
+img{
+    margin-left: 80px;
+}
+
+#p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.8em;
+    text-align: center;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+p{
+    margin: 0px;
+    padding: 0px;
+}
+
+#numeros{
+    display: flex;
+    background-color: rgb(17, 16, 16);
+    height: 680px;
+    
+}
+
+.botao{
+    display: block;
+    margin: 20px;
+    margin-top: 50px;
+    
+   
+}
+
+.numb{
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    margin-bottom: 10px;
+    border: solid 1px rgb(214, 7, 7);
+    
+}
+
+#vazio{
+    width: 100px;
+    height: 50px;
+    margin: 5px;
+    margin-bottom: 10px;
+    border: solid 1px white;
+    
+}
