@@ -3,7 +3,29 @@ body{
     margin: 0px;
     background-color: wheat;
 }
+h1{
+    text-align: center;
+    margin: 0px;
+}
 
+#piscando{
+    position: relative;
+}
+#piscando::after{/*Cria o efeito de piscar*/
+  content: '';
+  position: absolute;
+  left: 80px;
+  right: 0;
+  bottom: -100px;
+  height: 2px; /* A altura da linha */
+  width: 5%;
+  background: rgb(12, 12, 12); /* A cor da linha */
+  animation: blink 1s infinite; /*Delimita o tempo para piscar*/
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
 section{
     width: 90%;
     display: flex;
@@ -15,7 +37,8 @@ section{
 #tela{
     width: 60%;
     height: 600px;
-    background-color: black;
+    background-color: rgb(172, 166, 166);
+    border: solid 2px black;
     
 }
 
