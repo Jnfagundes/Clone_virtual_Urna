@@ -104,7 +104,7 @@ p{
     text-align: start;  
 }
 
-#zero{
+#botao0{
     margin-left: 119px;
 }
 
@@ -153,4 +153,13 @@ p{
     font-weight: bold;
     height: 80px;
        
+}
+
+footer{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(39, 35, 35);
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 25px;
+    border-top: solid 1px rgb(112, 110, 110);
 }
