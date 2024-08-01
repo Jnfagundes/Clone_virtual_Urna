@@ -29,6 +29,7 @@ const listaDeBotoes = document.querySelectorAll('button'); //seleciona todos os 
     } else {
         console.log('Botão desconhecido');
     }
+    criarElemento();
 }
- criarElemento();
+ 
  votando();
