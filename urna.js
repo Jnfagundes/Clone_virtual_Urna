@@ -1,87 +1,80 @@
-const listaDeBotoes = document.querySelectorAll('button'); //seleciona todos os elementos button
+// Seleciona todos os elementos button
+const listaDeBotoes = document.querySelectorAll('button');  
 
-//função para ser usada com os botões
- function votando(){
-    listaDeBotoes.forEach((botao, index)=>{ //aqui estou percorrendo a lista
-        //Adicionar um evento de click no botão
+// Função para ser usada com os botões
+function votando(){
+    listaDeBotoes.forEach((botao, index) => { // Percorre a lista de botões
+        // Adicionar um evento de click no botão
         botao.addEventListener('click', () => { 
-            //mostrar o resultado do click no console
-            console.log(`vc clicou  no botão ${index + 1}`);
-
-            processarBotao(index + 1)
+            // Mostrar o resultado do click no console
+            console.log(`Você clicou no botão ${index + 1}`);
+            processarBotao(index + 1);
         });
     });
- }
-
- function processarBotao(valor) {
-    // Estrutura condicional para verificar o valor
-    if (valor === 1) {
-        //Função para criar um elemento dentro do HTML
-        function criarElemento(){
-            const novaDiv = document.createElement('div'); 
-            //não esquecer de usar crase
-            novaDiv.innerHTML = `
-                <div></div>
-                
-                <img src="imagens/Lula_Molusco.jfif">
-            `;
-            
-            novaDiv.style.width = '650px';
-            novaDiv.style.height = '600px';
-            novaDiv.style.backgroundColor = 'white'
-            novaDiv.style.border = 'solid 1px black'
-
-            if(valor === 12){
-                novaDiv.innerHTML = ''
-            }
-        
-
-            const tela = document.getElementById('tela');
-            tela.appendChild(novaDiv);
-        };
-    } else if (valor === 2) {
-        console.log('Você clicou no Botão 2');
-    } else if (valor === 3) {
-        console.log('Você clicou no Botão 3');
-    } else if (valor === 4) {
-        console.log('Você clicou no Botão 4');
-    } else if (valor === 5) {
-        console.log('Você clicou no Botão 5');
-    } else if (valor === 6) {
-        console.log('Você clicou no Botão 6');
-    } else if (valor === 7) {
-        console.log('Você clicou no Botão 7');
-    } else if (valor === 8) {
-        console.log('Você clicou no Botão 8');
-    } else if (valor === 9) {
-        console.log('Você clicou no Botão 9');
-    } else if (valor === 10) {
-        console.log('Você clicou no Botão 10');
-    } else if (valor === 11) {
-        console.log('Você clicou no Botão 11');
-    } else if (valor === 12) {
-         //Função para criar um elemento dentro do HTML
-         function criarElemento(){
-            const novaDiv = document.createElement('div'); 
-            //não esquecer de usar crase
-            novaDiv.innerHTML = `
-                
-                
-            `;
-            
-            novaDiv.style.width = '650px';
-            novaDiv.style.height = '600px';
-            novaDiv.style.backgroundColor = 'white'
-            novaDiv.style.border = 'solid 1px black'
-            const tela = document.getElementById('tela');
-            tela.appendChild(novaDiv);
-        };
-    } else if (valor === 13) {
-        console.log('Você clicou no Botão 3');
-    } else {
-        console.log('Botão desconhecido');
-    }
-    criarElemento();
 }
- 
- votando();
+
+function criarElemento(imagemSrc = '') {
+    const tela = document.getElementById('tela');
+    tela.innerHTML = ''; // Limpa o conteúdo atual antes de adicionar algo novo
+
+    if (imagemSrc) {
+        const novaDiv = document.createElement('div'); 
+        novaDiv.innerHTML = `
+            <div></div>
+            <img src="${imagemSrc}">
+        `;
+        
+        novaDiv.style.width = '650px';
+        novaDiv.style.height = '600px';
+        novaDiv.style.backgroundColor = 'white';
+        novaDiv.style.border = 'solid 1px black';
+
+        tela.appendChild(novaDiv);
+    }
+}
+
+function processarBotao(valor) {
+    switch (valor) {
+        case 1:
+            criarElemento('imagens/Lula_Molusco.jfif');
+            break;
+        case 2:
+            criarElemento('imagens/bozo.jfif');
+            break;
+        case 3:
+            criarElemento('imagens/bozo.jfif');
+            break;
+        case 4:
+            criarElemento('imagens/bozo.jfif');
+            break;
+        case 5:
+            criarElemento('imagens/bozo.jfif');
+            break;
+        case 6:
+            criarElemento('imagens/bozo.jfif');
+            break;
+        case 7:
+            criarElemento('imagens/bozo.jfif');
+            break;
+        case 8:
+            criarElemento('imagens/bozo.jfif');
+            break;
+        case 9:
+            criarElemento('imagens/bozo.jfif');
+            break;
+        case 10:
+            criarElemento('imagens/bozo.jfif');
+            break;
+        case 11:
+            criarElemento('branco');
+            break;
+        // Continue com os demais cases conforme necessário
+        case 12:
+            criarElemento(''); // Limpa o conteúdo da div
+            break;
+        case 13:
+            criarElemento('FIM');
+    }
+}
+
+votando();
