@@ -36,44 +36,44 @@ function criarElemento(imagemSrc = '') {
 function processarBotao(valor) {
     switch (valor) {
         case 1:
-            criarElemento('imagens/Lula_Molusco.jfif');
+            criarElemento('imagens/Lula.png');
             break;
         case 2:
-            criarElemento('imagens/bozo.jfif');
+            criarElemento('imagens/bozzo.png');
             break;
         case 3:
-            criarElemento('imagens/bozo.jfif');
+            criarElemento('imagens/Lula.png');
             break;
         case 4:
-            criarElemento('imagens/bozo.jfif');
+            criarElemento('imagens/bozzo.png');
             break;
         case 5:
-            criarElemento('imagens/bozo.jfif');
+            criarElemento('imagens/Lula.png');
             break;
         case 6:
-            criarElemento('imagens/bozo.jfif');
+            criarElemento('imagens/bozzo.png');
             break;
         case 7:
-            criarElemento('imagens/bozo.jfif');
+            criarElemento('imagens/Lula.png');
             break;
         case 8:
-            criarElemento('imagens/bozo.jfif');
+            criarElemento('imagens/bozzo.png');
             break;
         case 9:
-            criarElemento('imagens/bozo.jfif');
+            criarElemento('imagens/Lula.png');
             break;
         case 10:
-            criarElemento('imagens/bozo.jfif');
+            criarElemento('imagens/bozzo.png');
             break;
         case 11:
-            criarElemento('branco');
+            criarElemento('imagens/branco.png');
             break;
         // Continue com os demais cases conforme necessário
         case 12:
             criarElemento(''); // Limpa o conteúdo da div
             break;
         case 13:
-            criarElemento('FIM');
+            criarElemento('imagens/fim.png');
     }
 }
 
