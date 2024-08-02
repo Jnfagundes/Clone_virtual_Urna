@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolher Imagem</title>
+    <style>
+        #imagem, #confirmar, #corrigir, #mensagem {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="mostrarImagem">Mostrar Imagem</button>
+    <img id="imagem" src="sua-imagem.jpg" alt="Imagem a ser exibida">
+    <br>
+    <button id="confirmar">Confirmar</button>
+    <button id="corrigir">Corrigir</button>
+    <p id="mensagem"></p>
+
+    <script>
+        const mostrarImagemBtn = document.getElementById('mostrarImagem');
+        const imagem = document.getElementById('imagem');
+        const confirmarBtn = document.getElementById('confirmar');
+        const corrigirBtn = document.getElementById('corrigir');
+        const mensagem = document.getElementById('mensagem');
+
+        mostrarImagemBtn.addEventListener('click', () => {
+            imagem.style.display = 'block';
+            confirmarBtn.style.display = 'inline';
+            corrigirBtn.style.display = 'inline';
+            mostrarImagemBtn.style.display = 'none';
+        });
+
+        confirmarBtn.addEventListener('click', () => {
+            mensagem.textContent = 'Fim';
+            mensagem.style.display = 'block';
+            confirmarBtn.style.display = 'none';
+            corrigirBtn.style.display = 'none';
+            imagem.style.display = 'none';
+        });
+
+        corrigirBtn.addEventListener('click', () => {
+            imagem.src = 'outra-imagem.jpg'; // Substitua pelo caminho da nova imagem
+            mensagem.style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
